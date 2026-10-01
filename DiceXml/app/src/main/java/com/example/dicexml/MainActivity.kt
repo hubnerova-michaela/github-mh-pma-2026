@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.view.animation.DecelerateInterpolator
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,18 +48,25 @@ class MainActivity : AppCompatActivity() {
         btnRoll.setOnClickListener { rollDice() }
     }
 
-    // Spustí animaci: 10 náhodných změn po 250 ms
+    // Spustí hod: otočení kostky + 10 náhodných změn po 250 ms + výsledný hod
     private fun rollDice() {
         btnRoll.isEnabled = false                // zákaz tlačítka během animace
+
+        // Animace otočení: 3 celé otáčky (1080°) za 2500 ms, postupně zpomaluje
+        tvDice.animate()
+            .rotationBy(1080f)
+            .setDuration(2500)
+            .setInterpolator(DecelerateInterpolator())
+            .start()
+
         showRandomSymbol(stepsLeft = 10)
     }
 
-    // Rekurzivně zobrazuje náhodné symboly, dokud zbývají kroky
+    // Zobrazí 10 náhodných symbolů, poté výsledný hod
     private fun showRandomSymbol(stepsLeft: Int) {
-        // Přímá změna textu v TextView
-        tvDice.text = diceSymbols.random()
+        tvDice.text = diceSymbols.random()       // ruční změna textu
 
-        if (stepsLeft > 1) {
+        if (stepsLeft > 0) {
             // Naplánuje další krok za 250 ms
             handler.postDelayed({ showRandomSymbol(stepsLeft - 1) }, 250)
         } else {

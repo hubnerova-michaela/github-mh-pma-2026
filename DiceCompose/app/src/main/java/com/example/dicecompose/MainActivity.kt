@@ -28,6 +28,10 @@ import com.example.dicecompose.ui.theme.DiceComposeTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.time.Duration.Companion.milliseconds
+import androidx.compose.animation.core.Animatable
+import androidx.compose.animation.core.LinearOutSlowInEasing
+import androidx.compose.animation.core.tween
+import androidx.compose.ui.graphics.graphicsLayer
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,6 +58,8 @@ fun DiceScreen() {
 
     // Scope pro coroutine (potřebujeme delay)
     val scope = rememberCoroutineScope()
+    // Úhel otočení kostky; Animatable umí hodnotu plynule animovat
+    val rotation = remember { Animatable(0f) }
 
     Column(
         modifier = Modifier
@@ -74,7 +80,9 @@ fun DiceScreen() {
         Text(
             text = diceSymbol,
             fontSize = 160.sp,
-            modifier = Modifier.padding(vertical = 24.dp),
+            modifier = Modifier
+                .padding(vertical = 24.dp)
+                .graphicsLayer { rotationZ = rotation.value },  // otočení podle stavu
             color = MaterialTheme.colorScheme.onBackground
         )
 
@@ -83,13 +91,26 @@ fun DiceScreen() {
             enabled = !isRolling,
             onClick = {
                 scope.launch {
-                    isRolling = true             // zákaz tlačítka
-                    repeat(10) {                 // 10 náhodných změn
-                        diceSymbol = diceSymbols.random()
-                        delay(250.milliseconds)               // prodleva 250 ms
+                    isRolling = true                     // zákaz tlačítka
+
+                    // Animace otočení běží souběžně (vlastní coroutine)
+                    launch {
+                        rotation.snapTo(0f)              // začni od nuly
+                        rotation.animateTo(
+                            targetValue = 1080f,         // 3 celé otáčky
+                            animationSpec = tween(
+                                durationMillis = 2500,
+                                easing = LinearOutSlowInEasing  // na konci zpomalí
+                            )
+                        )
                     }
-                    diceSymbol = diceSymbols.random() // výsledný hod
-                    isRolling = false            // povolení tlačítka
+
+                    repeat(10) {                         // 10 náhodných změn
+                        diceSymbol = diceSymbols.random()
+                        delay(250)                       // prodleva 250 ms
+                    }
+                    diceSymbol = diceSymbols.random()    // výsledný hod
+                    isRolling = false                    // povolení tlačítka
                 }
             }
         ) {
