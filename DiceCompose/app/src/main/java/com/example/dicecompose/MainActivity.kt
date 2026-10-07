@@ -27,11 +27,23 @@ import androidx.compose.ui.unit.sp
 import com.example.dicecompose.ui.theme.DiceComposeTheme
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlin.time.Duration.Companion.milliseconds
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.ui.graphics.graphicsLayer
+// --- nové importy pro design ---
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontFamily
+import com.example.dicecompose.ui.theme.CreamCard
+import com.example.dicecompose.ui.theme.DeepGreen
+import com.example.dicecompose.ui.theme.MintBackground
+import com.example.dicecompose.ui.theme.SageDisabled
+import com.example.dicecompose.ui.theme.SageGreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,31 +76,50 @@ fun DiceScreen() {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(MintBackground)          // mátové pozadí (před paddingem, aby šlo pod lišty)
             .systemBarsPadding(),                // odsazení od systémových lišt
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center // vystředění obsahu
     ) {
-        // Nadpis
+        // Nadpis v rukopisném písmu
         Text(
-            text = "Hoď kostkou",
-            fontSize = 32.sp,
+            text = "🌿 Hoď kostkou 🌿",
+            fontSize = 36.sp,
+            fontFamily = FontFamily.Cursive,
             fontWeight = FontWeight.Bold,
-            color = MaterialTheme.colorScheme.onBackground
+            color = DeepGreen
         )
 
-        // Symbol kostky, zobrazuje aktuální hodnotu stavu
-        Text(
-            text = diceSymbol,
-            fontSize = 160.sp,
+        // Karta s kostkou: krémové zaoblené pozadí + šalvějový obrys
+        Box(
             modifier = Modifier
                 .padding(vertical = 24.dp)
-                .graphicsLayer { rotationZ = rotation.value },  // otočení podle stavu
-            color = MaterialTheme.colorScheme.onBackground
-        )
+                .background(CreamCard, RoundedCornerShape(40.dp))
+                .border(3.dp, SageGreen, RoundedCornerShape(40.dp))
+                .padding(horizontal = 40.dp, vertical = 24.dp),
+            contentAlignment = Alignment.Center
+        ) {
+            // Symbol kostky, zobrazuje aktuální hodnotu stavu
+            Text(
+                text = diceSymbol,
+                fontSize = 140.sp,
+                modifier = Modifier
+                    .padding(16.dp)                                  // rezerva, aby se při otáčení neořezávalo
+                    .graphicsLayer { rotationZ = rotation.value },   // otočení podle stavu
+                color = DeepGreen
+            )
+        }
 
         // Tlačítko; enabled se řídí stavem isRolling
         Button(
             enabled = !isRolling,
+            shape = RoundedCornerShape(28.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = SageGreen,
+                contentColor = DeepGreen,
+                disabledContainerColor = SageDisabled,
+                disabledContentColor = DeepGreen.copy(alpha = 0.5f)
+            ),
             onClick = {
                 scope.launch {
                     isRolling = true                     // zákaz tlačítka
@@ -114,7 +145,14 @@ fun DiceScreen() {
                 }
             }
         ) {
-            Text("Hodit")
+            Text("Hodit 🌱", fontSize = 20.sp)
         }
+
+        // Dekorace
+        Text(
+            text = "🪴 🌱 🌿 🌱 🪴",
+            fontSize = 28.sp,
+            modifier = Modifier.padding(top = 32.dp)
+        )
     }
 }

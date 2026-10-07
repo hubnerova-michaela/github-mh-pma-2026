@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barva tlačítka podle stavu: zakázané je světlejší -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:color="@color/sage_disabled" />
+    <item android:color="@color/sage_green" />
+</selector>

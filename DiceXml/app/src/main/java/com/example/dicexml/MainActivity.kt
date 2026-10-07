@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.view.animation.DecelerateInterpolator
+import android.graphics.Color
+import androidx.activity.SystemBarStyle
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +25,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()                       // obsah pod systémovými lištami
+        // Světlé pozadí => tmavé ikony v systémových lištách (i v tmavém režimu telefonu)
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT)
+        )
         setContentView(R.layout.activity_main)
 
         // Odsazení obsahu od systémových lišt
