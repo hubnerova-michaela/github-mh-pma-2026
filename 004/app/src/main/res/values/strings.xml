@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">E-reader order</string>
+
+    <string name="title_model">Choose a model</string>
+    <string name="reader_kindle">Kindle</string>
+    <string name="reader_android">Android reader</string>
+    <string name="reader_color">Color reader</string>
+
+    <string name="title_extras">Accessories</string>
+    <string name="extra_case">Case</string>
+    <string name="extra_light">Reading light</string>
+    <string name="extra_warranty">Extended warranty</string>
+
+    <string name="btn_order">Order</string>
+    <string name="title_summary">Order summary</string>
+    <string name="summary_empty">Nothing ordered yet.</string>
+    <string name="summary_model">Model: %1$s</string>
+    <string name="summary_extras">Accessories: %1$s</string>
+    <string name="summary_no_extras">no accessories</string>
+    <string name="summary_total">Total price: %1$s</string>
+    <string name="img_desc">Image of the selected e-reader</string>
+    <string name="btn_reset">Start over</string>
+    <string name="title_quantity">Quantity</string>
+    <string name="title_case_color">Case color</string>
+    <string name="desc_minus">Decrease quantity</string>
+    <string name="desc_plus">Increase quantity</string>
+    <string name="summary_order">Model: %1$s\nQuantity: %2$d\nExtras: %3$s\nTotal: %4$s</string>
+    <string name="extra_case_color">%1$s (%2$s)</string>
+
+    <string-array name="case_colors">
+        <item>Pink</item>
+        <item>Lavender</item>
+        <item>Mint</item>
+        <item>Cream</item>
+    </string-array>
+    <string name="btn_minus" translatable="false">−</string>
+    <string name="btn_plus" translatable="false">+</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="price_kindle">2990</integer>
+    <integer name="price_android">3490</integer>
+    <integer name="price_color">4990</integer>
+    <integer name="price_case">490</integer>
+    <integer name="price_light">290</integer>
+    <integer name="price_warranty">690</integer>
+</resources>

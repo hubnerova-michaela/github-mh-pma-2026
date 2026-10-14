@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">E-Reader-Bestellung</string>
+
+    <string name="title_model">Modell wählen</string>
+    <string name="reader_kindle">Kindle</string>
+    <string name="reader_android">Android-Reader</string>
+    <string name="reader_color">Farb-Reader</string>
+
+    <string name="title_extras">Zubehör</string>
+    <string name="extra_case">Hülle</string>
+    <string name="extra_light">Leselampe</string>
+    <string name="extra_warranty">Verlängerte Garantie</string>
+
+    <string name="btn_order">Bestellen</string>
+    <string name="title_summary">Bestellübersicht</string>
+    <string name="summary_empty">Noch nichts bestellt.</string>
+    <string name="summary_model">Modell: %1$s</string>
+    <string name="summary_extras">Zubehör: %1$s</string>
+    <string name="summary_no_extras">ohne Zubehör</string>
+    <string name="summary_total">Gesamtpreis: %1$s</string>
+    <string name="img_desc">Bild des ausgewählten E-Readers</string>
+    <string name="btn_reset">Neu beginnen</string>
+    <string name="title_quantity">Menge</string>
+    <string name="title_case_color">Hüllenfarbe</string>
+    <string name="desc_minus">Menge verringern</string>
+    <string name="desc_plus">Menge erhöhen</string>
+    <string name="summary_order">Modell: %1$s\nMenge: %2$d\nZubehör: %3$s\nGesamt: %4$s</string>
+    <string name="extra_case_color">%1$s (%2$s)</string>
+
+    <string-array name="case_colors">
+        <item>Rosa</item>
+        <item>Lavendel</item>
+        <item>Mint</item>
+        <item>Creme</item>
+    </string-array>
+</resources>

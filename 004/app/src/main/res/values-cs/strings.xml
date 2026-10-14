@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Objednávka čteček</string>
+
+    <string name="title_model">Vyberte model</string>
+    <string name="reader_kindle">Kindle</string>
+    <string name="reader_android">Android čtečka</string>
+    <string name="reader_color">Barevná čtečka</string>
+
+    <string name="title_extras">Příslušenství</string>
+    <string name="extra_case">Pouzdro</string>
+    <string name="extra_light">Čtecí lampička</string>
+    <string name="extra_warranty">Prodloužená záruka</string>
+
+    <string name="btn_order">Objednat</string>
+    <string name="title_summary">Souhrn objednávky</string>
+    <string name="summary_empty">Zatím nic neobjednáno.</string>
+    <string name="summary_model">Model: %1$s</string>
+    <string name="summary_extras">Příslušenství: %1$s</string>
+    <string name="summary_no_extras">bez příslušenství</string>
+    <string name="summary_total">Celková cena: %1$s</string>
+    <string name="img_desc">Obrázek vybrané čtečky</string>
+    <string name="btn_reset">Začít znovu</string>
+    <string name="title_quantity">Množství</string>
+    <string name="title_case_color">Barva pouzdra</string>
+    <string name="desc_minus">Snížit množství</string>
+    <string name="desc_plus">Zvýšit množství</string>
+    <string name="summary_order">Model: %1$s\nMnožství: %2$d\nPříslušenství: %3$s\nCelkem: %4$s</string>
+    <string name="extra_case_color">%1$s (%2$s)</string>
+
+    <string-array name="case_colors">
+        <item>Růžová</item>
+        <item>Levandulová</item>
+        <item>Mátová</item>
+        <item>Krémová</item>
+    </string-array>
+</resources>
