@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">E-Reader-Bestellung</string>
+
+    <string name="title_model">Modell wählen</string>
+    <string name="reader_kindle">Kindle</string>
+    <string name="reader_android">Android-Reader</string>
+    <string name="reader_color">Farb-Reader</string>
+    <string name="title_extras">Zubehör</string>
+    <string name="extra_case">Hülle</string>
+    <string name="extra_light">Leselampe</string>
+    <string name="extra_warranty">Verlängerte Garantie</string>
+    <string name="img_desc">Bild des ausgewählten E-Readers</string>
+
+    <string name="price_total">Gesamtpreis: %1$s</string>
+    <string name="btn_order">Bestellung bestätigen</string>
+
+    <string name="summary_title">Bestellübersicht</string>
+    <string name="summary_model">Gewählter Reader: %1$s</string>
+    <string name="summary_extras">Zubehör:\n%1$s</string>
+    <string name="summary_no_extras">- keines</string>
+    <string name="summary_extra_item">- %1$s</string>
+    <string name="terms_title">Allgemeine Geschäftsbedingungen</string>
+    <string name="terms_text">(Deutsche Übersetzung der AGB, z. B. über den Translations Editor)</string>
+    <string name="btn_back">Zurück zur Bearbeitung</string>
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">E-reader order</string>
+
+    <string name="title_model">Choose a model</string>
+    <string name="reader_kindle">Kindle</string>
+    <string name="reader_android">Android reader</string>
+    <string name="reader_color">Color reader</string>
+    <string name="title_extras">Accessories</string>
+    <string name="extra_case">Case</string>
+    <string name="extra_light">Reading light</string>
+    <string name="extra_warranty">Extended warranty</string>
+    <string name="img_desc">Image of the selected e-reader</string>
+
+    <string name="price_total">Total price: %1$s</string>
+    <string name="btn_order">Confirm order</string>
+
+    <string name="summary_title">Order summary</string>
+    <string name="summary_model">Selected reader: %1$s</string>
+    <string name="summary_extras">Accessories:\n%1$s</string>
+    <string name="summary_no_extras">- none</string>
+    <string name="summary_extra_item">- %1$s</string>
+    <string name="terms_title">Terms and conditions</string>
+    <string name="terms_text">1. INTRODUCTION\nThese terms govern the rights and obligations of the seller and the buyer arising from a purchase contract concluded through the online shop.\n\n2. CONCLUSION OF THE CONTRACT\nAll product presentations are informative only. The contract is concluded when the buyer sends the order and the seller accepts it.\n\n3. PRICE AND PAYMENT\nThe buyer may pay by bank transfer or cash on delivery.\n\n4. WITHDRAWAL FROM THE CONTRACT\nThe buyer acknowledges that goods customised to the buyer\'s wishes cannot be returned.\n\n5. DEFECTIVE PERFORMANCE\nRights from defective performance are governed by the applicable legislation.\n\n6. PERSONAL DATA PROTECTION\nPersonal data is processed in accordance with the GDPR.\n\n7. FINAL PROVISIONS\nThe relationship is governed by Czech law. The rights of the consumer under mandatory legislation remain unaffected.</string>
+    <string name="btn_back">Back to editing</string>
+</resources>
