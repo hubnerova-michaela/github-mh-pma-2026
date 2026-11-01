@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barva ikon a popisků v dolní navigaci: vybraná záložka zelená, ostatní šedé -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/les" android:state_checked="true" />
+    <item android:color="@color/inkoust_svetly" />
+</selector>

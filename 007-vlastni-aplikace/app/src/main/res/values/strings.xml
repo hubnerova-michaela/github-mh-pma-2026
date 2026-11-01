@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Po stopách Kittela</string>
+    <string name="hlavicka">Po stopách doktora Kittela</string>
+
+    <!-- Dolní navigace -->
+    <string name="nav_uvod">Úvod</string>
+    <string name="nav_mista">Zastavení</string>
+    <string name="nav_povesti">Pověsti</string>
+    <string name="nav_kviz">Kvíz</string>
+
+    <!-- Úvod -->
+    <string name="uvod_nadpis">Jizerskohorský Faust</string>
+    <string name="uvod_podnadpis">Průvodce obcí Pěnčín a okolím</string>
+    <string name="uvod_text_1">Jan Antonín Eleazar Kittel se narodil v roce 1704 v osadě Šumburk, dnešní Krásné. Byl to lékař a léčitel, za kterým jezdili pacienti z Prahy i z Vídně, ale staral se i o chudé nemocné z celého okolí Jizerských hor a Krkonoš.</string>
+    <string name="uvod_text_2">V Krásné si postavil obrovský roubený dům, který sloužil jako horské sanatorium. Léčil bylinami a vodou z místních studánek, a to o desítky let dřív než Priessnitz nebo Kneipp. Uměl dokonce operovat oči.</string>
+    <string name="uvod_text_3">Jeho úspěch byl pro lidi tak záhadný, že o něm začaly kolovat pověsti o smlouvě s ďáblem, létajícím plášti a zázračné bylině. Projdi si místa, kde doktor žil, a rozhodni se, čemu věřit.</string>
+    <string name="uvod_obec_nadpis">Kittelovsko dnes</string>
+    <string name="uvod_obec_text">Krásná dnes patří k obci Pěnčín, stejně jako Alšovice, Bratříkov, Dolní Černá Studnice, Huť a Jistebsko. Obec leží na jižním okraji Jizerských hor, kousek od Jablonce nad Nisou.</string>
+    <string name="btn_prozkoumat">Prozkoumat zastavení</string>
+
+    <!-- Seznam míst -->
+    <string name="mista_nadpis">Zastavení</string>
+    <string name="mista_podnadpis">Klepni na místo a dozvíš se víc</string>
+
+    <!-- Detail -->
+    <string name="vite_ze">Víte, že…?</string>
+    <string name="ukazat_povest">👹 Ukázat pověst</string>
+    <string name="skryt_povest">Skrýt pověst</string>
+    <string name="povest_nadpis">Pověst praví…</string>
+    <string name="btn_navigovat">📍 Navigovat na místo</string>
+    <string name="chyba_mapy">V telefonu není aplikace s mapami.</string>
+    <string name="popis_obrazku">Fotografie místa</string>
+
+    <!-- Pověsti -->
+    <string name="povesti_nadpis">Pověsti o doktoru Kittelovi</string>
+    <string name="povesti_podnadpis">Klepni na pověst a rozbal ji</string>
+
+    <!-- Kvíz -->
+    <string name="kviz_nadpis">Pravda, nebo pověst?</string>
+    <string name="kviz_pocitadlo">Tvrzení %1$d z %2$d</string>
+    <string name="kviz_pravda">Pravda</string>
+    <string name="kviz_povest">Pověst</string>
+    <string name="kviz_spravne">Správně! %1$s</string>
+    <string name="kviz_spatne">Bohužel ne. %1$s</string>
+    <string name="kviz_dalsi">Další tvrzení</string>
+    <string name="kviz_vysledky">Zobrazit výsledek</string>
+    <string name="kviz_konec">Konec kvízu</string>
+    <string name="kviz_skore">Máš %1$d z %2$d správně</string>
+    <string name="kviz_hodnoceni_1">Výborně! Kittela znáš líp než jeho pacienti.</string>
+    <string name="kviz_hodnoceni_2">Dobrá práce! Pár pověstí tě ale nachytalo.</string>
+    <string name="kviz_hodnoceni_3">Doktor Kittel tě očaroval. Zkus to znovu!</string>
+    <string name="kviz_znovu">Hrát znovu</string>
+</resources>

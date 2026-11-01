@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Světle zelený "ovál" za ikonou vybrané záložky v dolní navigaci -->
+    <style name="IndikatorNavigace" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/les_svetla</item>
+    </style>
+
+    <!-- Společný vzhled nadpisů v jednotlivých fragmentech -->
+    <style name="NadpisFragmentu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inkoust</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="PodnadpisFragmentu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inkoust_svetly</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="TextOdstavec">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/inkoust</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:lineSpacingMultiplier">1.25</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+</resources>

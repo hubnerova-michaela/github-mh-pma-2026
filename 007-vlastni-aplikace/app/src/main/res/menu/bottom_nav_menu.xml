@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Položky dolní navigace. Každé id se v MainActivity přiřadí jednomu fragmentu. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_uvod"
+        android:icon="@drawable/ic_uvod"
+        android:title="@string/nav_uvod" />
+    <item
+        android:id="@+id/nav_mista"
+        android:icon="@drawable/ic_misto"
+        android:title="@string/nav_mista" />
+    <item
+        android:id="@+id/nav_povesti"
+        android:icon="@drawable/ic_kniha"
+        android:title="@string/nav_povesti" />
+    <item
+        android:id="@+id/nav_kviz"
+        android:icon="@drawable/ic_kviz"
+        android:title="@string/nav_kviz" />
+</menu>

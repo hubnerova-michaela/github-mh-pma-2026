@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pergamen"
+    tools:context=".UvodFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:contentDescription="@string/popis_obrazku"
+            android:scaleType="centerCrop"
+            android:src="@drawable/misto_kitteluv_dum" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                style="@style/NadpisFragmentu"
+                android:text="@string/uvod_nadpis"
+                android:textSize="28sp" />
+
+            <TextView
+                style="@style/PodnadpisFragmentu"
+                android:text="@string/uvod_podnadpis" />
+
+            <TextView
+                style="@style/TextOdstavec"
+                android:text="@string/uvod_text_1" />
+
+            <TextView
+                style="@style/TextOdstavec"
+                android:text="@string/uvod_text_2" />
+
+            <TextView
+                style="@style/TextOdstavec"
+                android:text="@string/uvod_text_3" />
+
+            <!-- Karta o obci -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/les_svetla"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:text="@string/uvod_obec_nadpis"
+                        android:textColor="@color/les"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text="@string/uvod_obec_text"
+                        android:textColor="@color/inkoust"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnProzkoumat"
+                android:textColor="@color/pergamen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingVertical="12dp"
+                android:text="@string/btn_prozkoumat"
+                android:textSize="16sp"
+                app:backgroundTint="@color/les" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

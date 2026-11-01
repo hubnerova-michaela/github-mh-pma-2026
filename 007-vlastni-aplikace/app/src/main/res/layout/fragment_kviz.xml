@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pergamen"
+    android:fillViewport="true"
+    tools:context=".KvizFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            style="@style/NadpisFragmentu"
+            android:text="@string/kviz_nadpis" />
+
+        <TextView
+            android:id="@+id/txtPocitadlo"
+            style="@style/PodnadpisFragmentu"
+            tools:text="Tvrzení 1 z 9" />
+
+        <!-- Karta s tvrzením -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/karta"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:strokeWidth="0dp">
+
+            <TextView
+                android:id="@+id/txtTvrzeni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="160dp"
+                android:padding="24dp"
+                android:textColor="@color/inkoust"
+                android:textSize="20sp"
+                tools:text="Kittel létal k pacientům do Vídně na kouzelném plášti." />
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Dvě odpovědi vedle sebe -->
+        <LinearLayout
+            android:id="@+id/layoutOdpovedi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPravda"
+                android:textColor="@color/pergamen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:paddingVertical="14dp"
+                android:text="@string/kviz_pravda"
+                android:textSize="16sp"
+                app:backgroundTint="@color/les" />
+
+            <Button
+                android:id="@+id/btnPovest"
+                android:textColor="@color/pergamen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:paddingVertical="14dp"
+                android:text="@string/kviz_povest"
+                android:textSize="16sp"
+                app:backgroundTint="@color/dabel" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVysledek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="Správně! Je to pověst."
+            tools:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnDalsi"
+            android:textColor="@color/pergamen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/kviz_dalsi"
+            android:visibility="gone"
+            app:backgroundTint="@color/zlata"
+            tools:visibility="visible" />
+    </LinearLayout>
+</ScrollView>

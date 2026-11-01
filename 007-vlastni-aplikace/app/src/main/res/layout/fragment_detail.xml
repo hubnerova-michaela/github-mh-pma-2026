@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pergamen"
+    tools:context=".DetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgDetail"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:contentDescription="@string/popis_obrazku"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/misto_kitteluv_dum" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/txtNazev"
+                style="@style/NadpisFragmentu"
+                tools:text="Kittelův dům (Burk)" />
+
+            <TextView
+                android:id="@+id/txtLokalita"
+                style="@style/PodnadpisFragmentu"
+                android:textColor="@color/les"
+                tools:text="Krásná" />
+
+            <TextView
+                android:id="@+id/txtPopis"
+                style="@style/TextOdstavec"
+                tools:text="Popis místa" />
+
+            <!-- Karta "Víte, že...?" -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:cardBackgroundColor="@color/les_svetla"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/vite_ze"
+                        android:textColor="@color/les"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txtZajimavost"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/inkoust"
+                        android:textSize="15sp"
+                        tools:text="Zajímavost" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnPovest"
+                android:textColor="@color/pergamen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/ukazat_povest"
+                app:backgroundTint="@color/dabel" />
+
+            <!-- Pověst: na začátku schovaná (visibility="gone"), odkryje ji tlačítko -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/kartaPovest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/dabel_tmava"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="0dp"
+                tools:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/povest_nadpis"
+                        android:textColor="@color/zlata"
+                        android:textSize="16sp"
+                        android:textStyle="bold|italic" />
+
+                    <TextView
+                        android:id="@+id/txtPovest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingMultiplier="1.25"
+                        android:textColor="@color/pergamen"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+                        tools:text="Text pověsti" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <Button
+                android:id="@+id/btnNavigovat"
+                android:textColor="@color/pergamen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/btn_navigovat"
+                app:backgroundTint="@color/les" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

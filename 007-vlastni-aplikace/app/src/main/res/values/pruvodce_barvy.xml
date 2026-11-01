@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Barvy průvodce: lesní zelená Jizerek, pergamen starých knih a ďábelská červená -->
+<resources>
+    <color name="les">#2F4A3A</color>
+    <color name="les_svetla">#DCE5DA</color>
+    <color name="pergamen">#F6F0E1</color>
+    <color name="karta">#FFFDF7</color>
+    <color name="inkoust">#2A2622</color>
+    <color name="inkoust_svetly">#6B6259</color>
+    <color name="dabel">#8E2B2B</color>
+    <color name="dabel_tmava">#3A1F1F</color>
+    <color name="zlata">#B8862F</color>
+</resources>
