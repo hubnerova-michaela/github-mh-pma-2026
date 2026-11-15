@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Na šířku by se obsah s novým prvkem nevešel na displej, proto se dá posouvat -->
+    <ScrollView android:layout_height="match_parent" android:layout_width="match_parent">
+
+        <!-- Hlavní obsah zarovnáme lineárně pod sebe -->
+        <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:orientation="vertical" android:padding="24dp">
+
+            <TextView android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:layout_width="wrap_content" android:text="Herní profil" android:textSize="24sp" android:textStyle="bold"/>
+
+            <EditText android:hint="Zadej herní přezdívku" android:id="@+id/etNickname" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:layout_width="match_parent"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchHardcoreMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zapnout Hardcore režim"
+                android:layout_marginBottom="24dp"/>
+
+            <Button android:id="@+id/btnSave" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Uložit (Stará metoda)"/>
+
+            <!-- Načítací kolečko je trvale viditelné a pořád se točí -->
+            <ProgressBar android:id="@+id/progressBar" android:indeterminate="true" android:layout_gravity="center" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_width="wrap_content"/>
+
+            <!-- Vlastní interaktivní prvek: reakční test. S ukládáním nesouvisí, ukazuje, jestli UI reaguje -->
+            <TextView android:layout_height="wrap_content" android:layout_marginTop="32dp" android:layout_width="wrap_content" android:text="Reakční test" android:textSize="18sp" android:textStyle="bold"/>
+
+            <TextView android:id="@+id/tvReactionPad" android:background="#455A64" android:clickable="true" android:focusable="true" android:gravity="center" android:layout_height="120dp" android:layout_marginTop="8dp" android:layout_width="match_parent" android:padding="8dp" android:text="Klepni pro start" android:textColor="#FFFFFF" android:textSize="20sp"/>
+
+            <TextView android:id="@+id/tvReactionResult" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_width="match_parent" android:text="Poslední: – · Nejlepší: –"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
